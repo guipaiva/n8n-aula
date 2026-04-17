@@ -1,5 +1,7 @@
 # N8N — Aula 7 TTI
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/guipaiva/n8n-aula)
+
 Repositório para rodar o N8N via GitHub Codespaces.
 
 ## Como usar
