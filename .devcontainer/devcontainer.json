@@ -1,0 +1,15 @@
+{
+  "name": "N8N Automação",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [5678],
+  "postStartCommand": "docker compose up -d",
+  "portsAttributes": {
+    "5678": {
+      "label": "N8N",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
