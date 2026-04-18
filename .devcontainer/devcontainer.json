@@ -9,7 +9,8 @@
   "portsAttributes": {
     "5678": {
       "label": "N8N",
-      "onAutoForward": "openBrowser"
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
     }
   }
 }
