@@ -1,4 +1,4 @@
-# N8N — Aula 7 TTI
+# N8N — Tecnologias em TI
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/guipaiva/n8n-aula)
 
