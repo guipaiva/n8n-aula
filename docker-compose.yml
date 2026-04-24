@@ -1,14 +1,25 @@
 services:
+  proxy:
+    image: nginx:alpine
+    ports:
+      - "5678:80"
+    depends_on:
+      - n8n
+    environment:
+      - CODESPACE_NAME=${CODESPACE_NAME}
+    volumes:
+      - ./nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
+
   n8n:
     image: n8nio/n8n
-    ports:
-      - "5678:5678"
     environment:
       - N8N_SECURE_COOKIE=false
       - N8N_EDITOR_BASE_URL=https://${CODESPACE_NAME}-5678.app.github.dev
       - WEBHOOK_URL=https://${CODESPACE_NAME}-5678.app.github.dev
       - N8N_PROTOCOL=https
       - N8N_HOST=0.0.0.0
+      - N8N_PORT=5679
+      - N8N_PROXY_HOPS=1
     volumes:
       - n8n_data:/home/node/.n8n
 
