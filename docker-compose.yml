@@ -11,7 +11,7 @@ services:
       - ./nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
 
   n8n:
-    image: n8nio/n8n
+    build: .
     environment:
       - N8N_SECURE_COOKIE=false
       - N8N_EDITOR_BASE_URL=https://${CODESPACE_NAME}-5678.app.github.dev
