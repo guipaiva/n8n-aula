@@ -18,7 +18,6 @@ services:
       - WEBHOOK_URL=https://${CODESPACE_NAME}-5678.app.github.dev
       - N8N_PROTOCOL=https
       - N8N_HOST=0.0.0.0
-      - N8N_PORT=5679
       - N8N_PROXY_HOPS=1
     volumes:
       - n8n_data:/home/node/.n8n
